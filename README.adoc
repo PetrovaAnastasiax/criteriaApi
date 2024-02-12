@@ -1,0 +1,31 @@
+= How to start an application?
+
+Change directory to `demo/docker-build` and run the following command to create the container image:
+
+[source]
+----
+docker build -t test-postgres:1.0 .
+----
+
+Run the following to start the container:
+
+[source]
+----
+docker run --name local-postgres -d -p 5432:5432 test-postgres:1.0
+----
+
+#### OR
+
+Pull Postgres image from Docker Hub:
+
+[source]
+----
+docker pull postgres
+----
+
+Start a container:
+
+[source]
+----
+docker run --name test-pg-13.3 -p 5432:5432 -e POSTGRES_USER=pgusr -e POSTGRES_PASSWORD=pgpwd321 -e POSTGRES_DB=mydb -d postgres:13.3
+----
