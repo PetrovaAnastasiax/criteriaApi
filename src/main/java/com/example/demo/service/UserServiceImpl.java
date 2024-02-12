@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.service;
 
 import com.example.demo.model.Person;
 import com.example.demo.repo.PersonDao;
